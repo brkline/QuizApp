@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="linear_layout_button_paddingBottom">16dp</dimen>
+    <dimen name="question5_linear_layout_marginBottom">8dp</dimen>
+    <dimen name="question4_linear_layout_marginBottom">8dp</dimen>
+    <dimen name="question3_linear_layout_marginBottom">8dp</dimen>
+    <dimen name="question2_linear_layout_marginBottom">8dp</dimen>
+    <dimen name="question1_linear_layout_marginBottom">8dp</dimen>
+    <dimen name="main_linear_layout_margin">16dp</dimen>
+</resources>

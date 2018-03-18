@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Star Wars Quiz</string>
+    <string name="question1">How many times has R2-D2 been to Dagobah?</string>
+    <string name="question1_radioButton1">1</string>
+    <string name="question1_radioButton2">3</string>
+    <string name="question1_radioButton3">20</string>
+    <string name="question2">Poe Dameron‘s mother gave him his first flight lessons in what type of starfighter?</string>
+    <string name="question2_radioButton1">A-wing</string>
+    <string name="question2_radioButton2">X-wing</string>
+    <string name="question2_radioButton3">Y-wing</string>
+    <string name="question3">What are the names of Poe’s heroic parents?</string>
+    <string name="question3_checkBox1">Han Solo</string>
+    <string name="question3_checkBox2">Shara Bey</string>
+    <string name="question3_checkBox3">Leia Organa</string>
+    <string name="question3_checkBox4">Kes Dameron</string>
+    <string name="question4">Who said \"Help me Obi-Wan Kenobi. You\'re my only hope.\"?</string>
+    <string name="question4_radioButton1">Han Solo</string>
+    <string name="question4_radioButton2">Leia Organa</string>
+    <string name="question4_radioButton3">Chewbacca</string>
+    <string name="question5">What does General Veers‘ AT-AT shoot just before destroying the Echo Base shield generator in The Empire Strikes Back?</string>
+    <string name="question5_radioButton1">Speeder Bike</string>
+    <string name="question5_radioButton2">Ewok</string>
+    <string name="question5_radioButton3">Rebel Soldier</string>
+    <string name="check_answers">Check Answers</string>
+    <string name="reset">Reset</string>
+    <string name="question1_answer" />
+
+</resources>
