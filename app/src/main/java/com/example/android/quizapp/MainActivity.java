@@ -56,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
         question3CheckBox2 = findViewById(R.id.question3_checkBox2);
         question3CheckBox3 = findViewById(R.id.question3_checkBox3);
         question3CheckBox4 = findViewById(R.id.question3_checkBox4);
-        Resources res = getResources();
-        messageText = res.getString(R.string.question_source_message);
-        Toast.makeText(this, messageText, Toast.LENGTH_LONG).show();
     }
 
     /*
