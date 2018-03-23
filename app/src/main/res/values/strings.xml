@@ -24,5 +24,9 @@
     <string name="check_answers">Check Answers</string>
     <string name="reset">Reset</string>
     <string name="question1_answer" />
+    <string name="correct_answer_message">You got %1d questions correct</string>
+    <string name="not_all_answered_message">You haven\'t answered all the questions yet</string>
+    <string name="question_source_message">Question and answer source:  http://www.starwars.com/news/star-wars-trivia-tuesday-answers</string>
+    <string name="question1_message">The answer to question 1 is not a number.  Please try again.</string>
 
 </resources>

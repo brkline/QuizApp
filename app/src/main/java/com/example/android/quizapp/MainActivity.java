@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     int correctAnswers = 0;
     int wrongAnswers = 0;
+    String messageText = "";
 
     EditText question1EditText;
     RadioGroup question2RadioGroup;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox question3CheckBox2;
     CheckBox question3CheckBox3;
     CheckBox question3CheckBox4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         question3CheckBox2 = findViewById(R.id.question3_checkBox2);
         question3CheckBox3 = findViewById(R.id.question3_checkBox3);
         question3CheckBox4 = findViewById(R.id.question3_checkBox4);
+        Resources res = getResources();
+        messageText = res.getString(R.string.question_source_message);
+        Toast.makeText(this, messageText, Toast.LENGTH_LONG).show();
     }
 
     /*
@@ -64,16 +70,18 @@ public class MainActivity extends AppCompatActivity {
         * Question and answer source:  http://www.starwars.com/news/star-wars-trivia-tuesday-answers
         */
 
-        int answer1 = 0;
-        int answer2 = 0;
-        int answer4 = 0;
-        int answer5 = 0;
+        int answer1;
+        int answer2;
+        int answer4;
+        int answer5;
+        Resources res = getResources();
 
         // We're going to try to cast the EditText to an int.  If it throws an exception, give them opportunity to reenter
         try {
             answer1 = Integer.parseInt(question1EditText.getText().toString());
         } catch (NumberFormatException e) {
-            Toast.makeText(this, "The answer to question 1 is not a number.  Please try again.", Toast.LENGTH_SHORT).show();
+            messageText = res.getString(R.string.question1_message);
+            Toast.makeText(this, messageText, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -120,20 +128,20 @@ public class MainActivity extends AppCompatActivity {
 
         // Add the correct and wrong answers together to make sure we get 5
         if (correctAnswers + wrongAnswers != 5) {
-            Toast.makeText(this, "You haven't answered all the questions yet", Toast.LENGTH_SHORT).show();
+            messageText = res.getString(R.string.not_all_answered_message);
+            Toast.makeText(this, messageText, Toast.LENGTH_SHORT).show();
             return;
         }
 
+        messageText = res.getString(R.string.correct_answer_message, correctAnswers);
         // Display the number they got correct
-        Toast.makeText(this, "You got " + correctAnswers + " questions correct", Toast.LENGTH_SHORT).show();
-
+        Toast.makeText(this, messageText, Toast.LENGTH_SHORT).show();
     }
 
     /*
     * Resets the questions
     */
     public void resetAll(View v) {
-
         question1EditText.setText("");
         question2RadioGroup.clearCheck();
         question3CheckBox1.setChecked(false);

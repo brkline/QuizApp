@@ -3,10 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/contentLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/main_linear_layout_margin"
         android:orientation="vertical">
 
@@ -208,28 +211,33 @@
             </RadioGroup>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/linear_layout_button_paddingBottom">
 
-            <Button
-                android:id="@+id/checkAnswer_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="checkAnswers"
-                android:text="@string/check_answers" />
-
-            <Button
-                android:id="@+id/reset_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="resetAll"
-                android:text="@string/reset" />
-        </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/linear_layout_button_paddingBottom"
+        android:layout_below="@id/contentLinearLayout"
+        android:layout_margin="@dimen/button_linearLayout_margin"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/checkAnswer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="checkAnswers"
+            android:text="@string/check_answers" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="resetAll"
+            android:text="@string/reset" />
+    </LinearLayout>
+</RelativeLayout>
 </ScrollView>
